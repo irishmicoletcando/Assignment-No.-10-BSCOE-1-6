@@ -36,3 +36,6 @@ def read_qrcodes(frame):
             file.write(qrcode_info + (f"\n\n\n\n\nDate and Time: {timestamp}"))
     return frame
     
+def main():
+    camera = cv2.VideoCapture(1)
+    ret, frame = camera.read()
