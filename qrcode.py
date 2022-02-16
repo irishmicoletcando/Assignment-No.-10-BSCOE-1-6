@@ -23,8 +23,9 @@ def read_qrcodes(frame):
     for qrcode in qrcodes:
         a, b , c, d = qrcode.rect
 
-        now = datetime.now()
-        timestamp = datetime.timestamp(now)
+        today = datetime.now()              
+        time_ = today.strftime("%H:%M")
+        date_ = today.strftime("%B %d, %Y")
 
         qrcode_info = qrcode.data.decode('utf-8')
         cv2.rectangle(frame, (a, b), (a+c, b+d), (0, 255, 0), 2)
@@ -33,7 +34,7 @@ def read_qrcodes(frame):
         cv2.putText(frame, "CONTRACT TRACING", (a + 6, b - 6), font, 2.0, (255, 255, 255), 1)
 
         with open("contracttracinginformation.txt", mode ='w') as file:
-            file.write(qrcode_info + (f"\n\n\n\n\nDate and Time: {timestamp}"))
+            file.write(qrcode_info + (f"\n\n\nDate: {date_}\nTime: {time_}"))
     return frame
     
 def main():
