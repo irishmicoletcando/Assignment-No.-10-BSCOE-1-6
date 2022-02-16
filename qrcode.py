@@ -26,5 +26,5 @@ def read_barcodes(frame):
         cv2.rectangle(frame, (a, b),(a+c, b+d), (0, 255, 0), 2)
 
         font = cv2.FONT_HERSHEY_DUPLEX
-        cv2.putText(frame, barcode_info, (x + 6, y - 6), font, 2.0, (255, 255, 255), 1)
+        cv2.putText(frame, barcode_info, (a + 6, b - 6), font, 2.0, (255, 255, 255), 1)
     
