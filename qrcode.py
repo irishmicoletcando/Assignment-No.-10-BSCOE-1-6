@@ -16,3 +16,9 @@
 
 import cv2
 from pyzbar import pyzbar
+
+def read_barcodes(frame):
+    barcodes = pyzbar.decode(frame)
+    for barcode in barcodes:
+        a, b , c, d = barcode.rect
+    
