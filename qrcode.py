@@ -17,12 +17,12 @@
 import cv2
 from pyzbar import pyzbar
 
-def read_barcodes(frame):
-    barcodes = pyzbar.decode(frame)
-    for barcode in barcodes:
-        a, b , c, d = barcode.rect
+def read_qrcodes(frame):
+    qrcodes = pyzbar.decode(frame)
+    for qrcode in qrcodes:
+        a, b , c, d = qrcode.rect
 
-        barcode_info = barcode.data.decode('utf-8')
+        barcode_info = qrcode.data.decode('utf-8')
         cv2.rectangle(frame, (a, b),(a+c, b+d), (0, 255, 0), 2)
 
         font = cv2.FONT_HERSHEY_DUPLEX
