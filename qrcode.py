@@ -14,7 +14,7 @@
 
 # source: https://towardsdatascience.com/building-a-barcode-qr-code-reader-using-python-360e22dfb6e5
 
-import datetime
+from datetime import datetime
 import cv2
 from pyzbar import pyzbar
 
@@ -22,6 +22,9 @@ def read_qrcodes(frame):
     qrcodes = pyzbar.decode(frame)
     for qrcode in qrcodes:
         a, b , c, d = qrcode.rect
+
+        now = datetime.now()
+        timestamp = datetime.timestamp(now)
 
         qrcode_info = qrcode.data.decode('utf-8')
         cv2.rectangle(frame, "COVID CONTRACT TRACING", (a, b),(a+c, b+d), (0, 255, 0), 2)
