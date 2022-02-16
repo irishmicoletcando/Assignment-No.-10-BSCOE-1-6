@@ -27,8 +27,12 @@ def read_qrcodes(frame):
         timestamp = datetime.timestamp(now)
 
         qrcode_info = qrcode.data.decode('utf-8')
-        cv2.rectangle(frame, "COVID CONTRACT TRACING", (a, b),(a+c, b+d), (0, 255, 0), 2)
+        cv2.rectangle(frame, "COVID CONTRACT TRACING INFORMATION", (a, b),(a+c, b+d), (0, 255, 0), 2)
 
         font = cv2.FONT_HERSHEY_DUPLEX
         cv2.putText(frame, qrcode_info, (a + 6, b - 6), font, 2.0, (255, 255, 255), 1)
+
+        with open("QRinfo.txt", mode ='w') as file:
+            file.write(qrcode_info + (f"\n\n\n\n\nDate and Time: {timestamp}"))
+    return frame
     
