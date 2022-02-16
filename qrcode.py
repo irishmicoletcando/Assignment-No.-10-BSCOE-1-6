@@ -46,3 +46,6 @@ def main():
         cv2.imshow('QR code reader', frame)
         if cv2.waitKey(1) & 0xFF == 27:
             break
+    
+    camera.release()
+    cv2.destroyAllWindows()
