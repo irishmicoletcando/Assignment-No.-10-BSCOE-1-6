@@ -49,3 +49,5 @@ def main():
     
     camera.release()
     cv2.destroyAllWindows()
+
+main()
