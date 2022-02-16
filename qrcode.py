@@ -32,10 +32,17 @@ def read_qrcodes(frame):
         font = cv2.FONT_HERSHEY_DUPLEX
         cv2.putText(frame, qrcode_info, (a + 6, b - 6), font, 2.0, (255, 255, 255), 1)
 
-        with open("QRinfo.txt", mode ='w') as file:
+        with open("contracttracinginformation.txt", mode ='w') as file:
             file.write(qrcode_info + (f"\n\n\n\n\nDate and Time: {timestamp}"))
     return frame
     
 def main():
     camera = cv2.VideoCapture(1)
     ret, frame = camera.read()
+
+    while ret:
+        ret, frame = camera.read()
+        frame = read_qrcodes(frame)
+        cv2.imshow('QR code reader', frame)
+        if cv2.waitKey(1) & 0xFF == 27:
+            break
