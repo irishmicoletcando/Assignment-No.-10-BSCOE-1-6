@@ -12,5 +12,7 @@
 #     - Your source code should be in github before Feb 19
 #     - Create a demo of your program (1-2 min) and send it directly to my messenger.
 
+# source: https://towardsdatascience.com/building-a-barcode-qr-code-reader-using-python-360e22dfb6e5
+
 import cv2
 from pyzbar import pyzbar
