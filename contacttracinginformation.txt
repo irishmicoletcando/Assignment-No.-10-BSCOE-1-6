@@ -1,0 +1,42 @@
+Name: Irish Micole Cando
+Age: 20
+Address: Valenzuela City, Metro Manila
+Birthdate: February 15, 2002
+Phone Number: 09123456789
+Email: im@gmail.com
+
+Vaccination Status:
+  1st dose
+  2nd dose
+/ Booster
+
+Vaccine: 
+  Sinovac
+  Pfizer
+/ Astrazenica
+  Moderna
+
+Do you have a close-contact with a COVID-positive?
+  Yes
+/ No 
+
+Have you experience the following symptoms?
+  Fever
+  Cough
+  Shortness of breath
+  Respiratory distress
+  Chills
+  Muscle aches
+  Headache
+  Nausea/Vomiting
+  Diarrhea
+  Loss of taste or smell
+  Runny nose
+  Sore throat
+  Fatigue
+  Dizziness
+/ None
+
+
+Date: February 17, 2022
+Time: 08:29
